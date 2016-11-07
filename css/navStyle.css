@@ -1,3 +1,48 @@
+header {
+  background: #abc; }
 
+nav {
+  margin: 0 -15px;
+  font-size: 1.5em; }
+  nav .navMenu {
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    cursor: pointer; }
+  nav .upperNav {
+    height: 1.5em;
+    background: red; }
+  nav .lowerNav ul {
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    overflow: hidden; }
+    nav .lowerNav ul li {
+      line-height: 2em; }
+      nav .lowerNav ul li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid black; }
+
+.navScroll {
+  max-height: 100% !important; }
+
+.subMenuIcon {
+  position: relative;
+  height: 0;
+  top: -2.04em;
+  left: 5.5em;
+  cursor: pointer; }
+  .subMenuIcon span {
+    display: inline-block;
+    background: red;
+    line-height: 1.8em;
+    height: 1.8em;
+    width: 1.8em;
+    border: 1px solid black;
+    border-radius: 0.5em; }
 
 /*# sourceMappingURL=navStyle.css.map */
