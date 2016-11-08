@@ -1,14 +1,12 @@
-header {
-    background: #abc;
-}
 nav {
     margin: 0 -15px;
-    font-size: 1.5em;
+    font-size: 1em;
     .navMenu {
         height: 2.5em;
         line-height: 2.5em;
         text-align: center;
         cursor: pointer;
+        background: #abc;
     }
     .upperNav {
         height: 1.5em;
@@ -19,13 +17,14 @@ nav {
             max-height: 0;
             margin: 0;
             padding: 0;
-            list-style: none;
-            text-align: center;
+            list-style-type: none;
             overflow: hidden;
             li {
+                text-align: center;
                 line-height: 2em;
                 a {
                     display: block;
+                    background: $sub-blue;
                     text-decoration: none;
                     color: white;
                     border-bottom: 1px solid black;
@@ -38,6 +37,7 @@ nav {
     max-height: 100% !important;
 }
 
+//navigation btns for mobile viewport
 .subMenuIcon {
     position: relative;
     height: 0;
@@ -52,5 +52,50 @@ nav {
         width: 1.8em;
         border: 1px solid black;
         border-radius: 0.5em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        .navMenu {
+            display: none;
+        }
+        .lowerNav {
+            position: absolute;
+            width: 100%;
+            .menu {
+                > li { //parent list item for navbar
+                    float: left;
+                    display: block;
+                }
+            }
+            ul {
+                max-height: none;
+                overflow: visible;
+                li {
+                    display: none;
+                    position: relative;
+                    width: 9em;
+                    &:hover {
+                        > ul > li {
+                            display: block;
+                        }
+                    }
+                    ul {
+                        ul { //repositioning to the left of its parent li
+                            position: absolute;
+                            top: 0;
+                            left: 9em;
+                        }
+                    }
+                    a {
+                        border-bottom: none;
+                    }
+                }
+            } // ul
+        } // .lowerNav
+    } // nav     
+    .subMenuIcon {
+        display: none;
     }
 }
