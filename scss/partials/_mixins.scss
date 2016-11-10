@@ -5,3 +5,9 @@
     -o-background-size: $bgVal !important;
     background-size: $bgVal !important;
 }
+
+@mixin header-shadow-inset($opacity: 0.50) {
+    -webkit-box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, $opacity);
+    -moz-box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, $opacity);
+    box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, $opacity);
+}

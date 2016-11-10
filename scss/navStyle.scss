@@ -7,21 +7,20 @@ This stylesheet holds all the styling for the theme's main navigation bar.
 
 nav {
     font-size: 1em;
+    color: $white;
     margin: 0 -15px;
     position: fixed;
     width: 100%;
     .upperNav {
         width: 100%;
-        color: white;
         height: 2em;
         line-height: 2em;
         background: $main-blue;
     }
     .navMenu {
-        height: 3em;
-        line-height: 3em;
+        height: $navHeight;
+        line-height: $navHeight;
         text-align: center;
-        color: white;
         cursor: pointer;
         background: $sub-blue;
     }
@@ -35,12 +34,12 @@ nav {
             overflow: hidden;
             li {
                 text-align: center;
-                line-height: 3em;
+                line-height: $navHeight;
                 background: $sub-blue-80;
                 a {
+                    color: $white;
                     display: block;
                     text-decoration: none;
-                    color: white;
                     border-bottom: 1px solid black;
                 }
             }
@@ -55,7 +54,7 @@ nav {
 .subMenuIcon {
     position: relative;
     height: 0;
-    top: -3.04em;
+    bottom: $navHeight; //-3.04em
     left: 5.5em;
     cursor: pointer;
     span {
@@ -74,7 +73,7 @@ nav {
     nav {
         .navStrip {
             position: fixed;
-            height: 3em;
+            height: $navHeight;
             width: 100%;
             background: $sub-blue-80;
         }
@@ -82,8 +81,6 @@ nav {
             display: none;
         }
         .lowerNav {
-//            width: 1170px;
-//            margin: 0 auto;
             .menu {
                 > li { //parent menu-list
                     float: left;
