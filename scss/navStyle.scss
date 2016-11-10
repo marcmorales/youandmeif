@@ -1,18 +1,32 @@
+/*
+This stylesheet holds all the styling for the theme's main navigation bar.
+*/
+
+@import 'partials/variables';
+@import 'partials/mixins';
+
 nav {
-    margin: 0 -15px;
     font-size: 1em;
-    .navMenu {
-        height: 2.5em;
-        line-height: 2.5em;
-        text-align: center;
-        cursor: pointer;
-        background: #abc;
-    }
+    margin: 0 -15px;
+    position: fixed;
+    width: 100%;
     .upperNav {
-        height: 1.5em;
-        background: red;
+        width: 100%;
+        color: white;
+        height: 2em;
+        line-height: 2em;
+        background: $main-blue;
+    }
+    .navMenu {
+        height: 3em;
+        line-height: 3em;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        background: $sub-blue;
     }
     .lowerNav {
+        margin: 0 -15px;
         ul {
             max-height: 0;
             margin: 0;
@@ -21,10 +35,10 @@ nav {
             overflow: hidden;
             li {
                 text-align: center;
-                line-height: 2em;
+                line-height: 3em;
+                background: $sub-blue-80;
                 a {
                     display: block;
-                    background: $sub-blue;
                     text-decoration: none;
                     color: white;
                     border-bottom: 1px solid black;
@@ -37,11 +51,11 @@ nav {
     max-height: 100% !important;
 }
 
-//navigation btns for mobile viewport
+//navigation buttons for mobile viewport
 .subMenuIcon {
     position: relative;
     height: 0;
-    top: -2.04em;
+    top: -3.04em;
     left: 5.5em;
     cursor: pointer;
     span {
@@ -55,18 +69,26 @@ nav {
     }
 }
 
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 769px) {
     nav {
+        .navStrip {
+            position: fixed;
+            height: 3em;
+            width: 100%;
+            background: $sub-blue-80;
+        }
         .navMenu {
             display: none;
         }
         .lowerNav {
-            position: absolute;
-            width: 100%;
+//            width: 1170px;
+//            margin: 0 auto;
             .menu {
-                > li { //parent list item for navbar
+                > li { //parent menu-list
                     float: left;
                     display: block;
+                    background: none;
                 }
             }
             ul {

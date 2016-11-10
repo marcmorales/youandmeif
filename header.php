@@ -23,13 +23,20 @@
     <header>
         <div class="container-fluid">
            <nav>
-               <div class="upperNav"></div>
-                   <div class="lowerNav">
-                    <?php 
-                       $args = array('theme_location' => 'primary');
-                       wp_nav_menu( $args ); 
-                    ?>
-                    <div class="navMenu">Menu</div>
+             <div class="upperNav">
+                 <div class="container">
+                     text
+                 </div>
+             </div>
+              <div class="navStrip"></div>
+               <div class="lowerNav">
+                   <div class="container">
+                        <?php 
+                           $args = array('theme_location' => 'primary');
+                           wp_nav_menu( $args ); 
+                        ?>
+                        <div class="navMenu">Menu</div>
+                    </div>
                 </div>
            </nav>
         </div>

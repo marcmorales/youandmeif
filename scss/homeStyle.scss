@@ -1,0 +1,12 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+#bannerImage {
+    height: 70vh;
+    overflow: hidden;
+    @include header-bg;
+}
+
+@media screen and (min-width: 992px) {
+}
+

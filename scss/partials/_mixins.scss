@@ -1,0 +1,7 @@
+@mixin header-bg( $bgVal: cover ) {
+    -webkit-background-size: $bgVal !important;
+    -moz-background-size: $bgVal !important;
+    -ms-background-size: $bgVal !important;
+    -o-background-size: $bgVal !important;
+    background-size: $bgVal !important;
+}
