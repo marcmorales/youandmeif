@@ -1,10 +1,21 @@
 $(document).ready(function() {
     
-    function youAndMeGen() {
-        var navUl = $("nav .menu"),
-        myWindow = $(window),
-        windowWidth = myWindow.innerWidth;
+    "use strict";
+    
+     var myWindow,
+         youandmeBlog;
 
+    myWindow = $(window);
+    
+    /*
+    ===============================
+        Navigation functions
+    ===============================
+    */
+    function youAndMeGen() {
+        
+        var navUl = $("nav .menu");
+        
         //main nav menu toggle for mobile and tablet
         $(".navMenu").click(function() {
             navUl.toggleClass("navScroll");
@@ -14,6 +25,8 @@ $(document).ready(function() {
 //                    navUl.removeClass("navScroll");
 //                });
         });
+        
+        // collapse functionality for sub-menu-items
         function navResponsive() {
             var menuItem = $(".menu-item"),
                 subMenu = menuItem.children(".sub-menu");
@@ -33,8 +46,61 @@ $(document).ready(function() {
                 }
             });
         }
-        navResponsive();
+        navResponsive();                
     }
     youAndMeGen();
+    
+    /*
+    ===============================
+            Blog functions
+    ===============================
+    */
+    youandmeBlog = $(".youandmeBlog");
+    var newBlog = youandmeBlog.first(),
+        blogImgWrap = $(".thumbnail-img");
+    
+    // resize latest post to full width of it's container class
+    function blogMediumLayout() {
+        
+        if(window.innerWidth >= 992) {
+            newBlog.removeClass("col-md-4");
+            newBlog.addClass("col-md-12");
+        }
+        else {
+            newBlog.removeClass("col-md-12");
+            newBlog.addClass("col-md-4");
+        }
+        
+        // imitate background-size:cover for featured imgs
+        blogImgWrap.each(function() {
+            // set size
+            var th = $(this).height(), // wrapper height
+                tw = $(this).width(), // wrapper width
+                im = $(this).children('img'), // image
+                ih = im.height(), // initial image height
+                iw = im.width(); // initial image width
+            
+            if ((th/tw) > (ih/iw)) { 
+                im.addClass('wh').removeClass('ww'); // set height 100%
+            } else { 
+                im.addClass('ww').removeClass('wh'); //set width 100%
+            }
+            // set offset
+            var nh = im.height(), // new image height
+                nw = im.width(), // new image width
+                hd = (nh - th) / 2, // half dif img/box height
+                wd = (nw - tw) / 2; //half dif img/box width
+            
+            if (hd < 1) {hd = 0;}
+            if (wd < 1) {wd = 0;}
+            
+            im.css({marginLeft: '-'+wd+'px', marginTop: '-'+hd+'px'});//offset left
+        });
+    }
+    //init setup
+    blogMediumLayout();
+    //listen to resize
+    myWindow.resize(blogMediumLayout);
+    
     
 });

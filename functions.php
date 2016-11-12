@@ -28,7 +28,7 @@ function remove_admin_login_header() {
 }
 add_action('get_header', 'remove_admin_login_header');
 
-//Navigation Menu
+// Navigation Menu
 function  youandmeif_theme_setup() {
     add_theme_support('menus');
     
@@ -39,12 +39,24 @@ function  youandmeif_theme_setup() {
 }
 add_action('init', 'youandmeif_theme_setup');
 
-add_theme_support('custom-background');
+// Theme supports
+function youandmeif_theme_support() {
+    
+    // front-page banner
+    add_theme_support('custom-header');
+    
+    // featured image support
+    add_theme_support('post-thumbnails');
+    add_image_size('medium-thumbnail');
+    
+    // post formats
+    add_theme_support('post-formats', array(
+        'aside', 'gallery', 'image', 'status', 'video'));
+}
+add_action('after_setup_theme', 'youandmeif_theme_support');
 
-$youandmeHeaderImg = array(
-    'width'                 => 1920,
-    'height'                => 620,
-	'default-image'          => get_template_directory_uri() . '/images/disney_tour.jpg',
-    'uploads'               => true,
-);
-add_theme_support('custom-header');
+// Custom excerpt word-count length
+function youandmeif_excerpt_length() {
+    return 25;
+}
+add_filter('excerpt_length', 'youandmeif_excerpt_length');
