@@ -16,6 +16,10 @@ nav {
         height: 2em;
         line-height: 2em;
         background: $main-blue;
+        overflow: hidden;
+        .searchform {
+            display: none;
+        }
     }
     .navMenu {
         height: $navHeight;
@@ -79,6 +83,27 @@ nav {
         }
         .navMenu {
             display: none;
+        }
+        .upperNav {
+            .searchform {
+                display: block;
+                float: right;
+                color: black;
+                font-size: 12px;
+                input {
+                    height: 1.5em;
+                    line-height: normal;
+                    font-weight: normal;
+                    border: none;
+                }
+                .screen-reader-text {
+                    opacity: 0;
+                }
+                .search-submit {
+                    color: $white;
+                    background-color: $sub-blue;
+                }
+            }
         }
         .lowerNav {
             .menu {

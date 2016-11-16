@@ -33,8 +33,8 @@ function  youandmeif_theme_setup() {
     add_theme_support('menus');
     
     register_nav_menus( array(
-    'primary' => __('Primary Menu'),
-    'footer' => __('Footer Menu'),
+    'primary' => __('You&Me Primary Menu'),
+    'footer' => __('You&Me Footer Menu'),
     ));
 }
 add_action('init', 'youandmeif_theme_setup');
@@ -55,8 +55,28 @@ function youandmeif_theme_support() {
 }
 add_action('after_setup_theme', 'youandmeif_theme_support');
 
+// Applying Categories to Attachments
+function youandmeif_category_attachments() {
+    register_taxonomy_for_object_type('category', 'attachment');
+}
+add_action('init', 'youandmeif_category_attachments');
+
+// Child-page layout
+function youandmeif_childPage() {
+    
+    global $post;
+    
+    if($post->post_parent) {
+        $ancestors = array_reverse(get_post_ancestors($post->ID));
+        return $ancestors[0];
+    }
+    
+    return $post->ID;
+}
+
 // Custom excerpt word-count length
 function youandmeif_excerpt_length() {
-    return 25;
+    return 40;
 }
 add_filter('excerpt_length', 'youandmeif_excerpt_length');
+

@@ -11,7 +11,10 @@ nav {
     width: 100%;
     height: 2em;
     line-height: 2em;
-    background: #052451; }
+    background: #052451;
+    overflow: hidden; }
+    nav .upperNav .searchform {
+      display: none; }
   nav .navMenu {
     height: 3em;
     line-height: 3em;
@@ -62,6 +65,21 @@ nav {
     background: rgba(0, 178, 232, 0.8); }
   nav .navMenu {
     display: none; }
+  nav .upperNav .searchform {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 12px; }
+    nav .upperNav .searchform input {
+      height: 1.5em;
+      line-height: normal;
+      font-weight: normal;
+      border: none; }
+    nav .upperNav .searchform .screen-reader-text {
+      opacity: 0; }
+    nav .upperNav .searchform .search-submit {
+      color: white;
+      background-color: #00b2e8; }
   nav .lowerNav .menu > li {
     float: left;
     display: block;
