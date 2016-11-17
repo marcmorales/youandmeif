@@ -3,3 +3,47 @@
 @import 'navStyle';
 @import 'homeStyle';
 @import 'blogStyle';
+
+/*
+=====================================================================================
+You & Me International Foundation default CSS settings
+All CSS listed here can be modified in WP Admin Dashboard
+=====================================================================================
+*/
+
+/* General Colors */
+
+html,
+body {
+    a {
+        color: $sub-blue;
+        &:hover {
+            color: $sub-blue-80;
+        }
+    }
+}
+
+/* Navigation */
+
+nav {    
+    color: $white;
+    .navMenu,
+    .navStrip,
+    li {
+        background: $sub-blue-80;
+    }    
+    .upperNav {
+        background: $main-blue;
+    }
+    a {
+    color: inherit;
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+/* Large tablet, laptop and desktop viewport */
+@media screen and (min-width: 768px) {
+    
+}

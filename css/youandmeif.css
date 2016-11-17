@@ -2,8 +2,6 @@
 This stylesheet holds all the styling for the theme's main navigation bar.
 */
 nav {
-  font-size: 1em;
-  color: white;
   margin: 0 -15px;
   position: fixed;
   width: 100%; }
@@ -11,7 +9,6 @@ nav {
     width: 100%;
     height: 2em;
     line-height: 2em;
-    background: #052451;
     overflow: hidden; }
     nav .upperNav .searchform {
       display: none; }
@@ -19,8 +16,7 @@ nav {
     height: 3em;
     line-height: 3em;
     text-align: center;
-    cursor: pointer;
-    background: #00b2e8; }
+    cursor: pointer; }
   nav .lowerNav {
     margin: 0 -15px; }
     nav .lowerNav ul {
@@ -31,10 +27,8 @@ nav {
       overflow: hidden; }
       nav .lowerNav ul li {
         text-align: center;
-        line-height: 3em;
-        background: rgba(0, 178, 232, 0.8); }
+        line-height: 3em; }
         nav .lowerNav ul li a {
-          color: white;
           display: block;
           text-decoration: none;
           border-bottom: 1px solid black; }
@@ -61,8 +55,7 @@ nav {
   nav .navStrip {
     position: fixed;
     height: 3em;
-    width: 100%;
-    background: rgba(0, 178, 232, 0.8); }
+    width: 100%; }
   nav .navMenu {
     display: none; }
   nav .upperNav .searchform {
@@ -129,11 +122,43 @@ nav {
       outline: 1px solid orange; }
     .blogArea .youandmeBlog .thumbnail-img .blogSummary {
       outline: 1px solid blue; }
+.blogArea .post-aside {
+  background: pink; }
 
 .wh {
   height: 100% !important; }
 
 .ww {
   width: 100% !important; }
+
+/*
+=====================================================================================
+You & Me International Foundation default CSS settings
+All CSS listed here can be modified in WP Admin Dashboard
+=====================================================================================
+*/
+/* General Colors */
+html a,
+body a {
+  color: #00b2e8; }
+  html a:hover,
+  body a:hover {
+    color: rgba(0, 178, 232, 0.8); }
+
+/* Navigation */
+nav {
+  color: white; }
+  nav .navMenu,
+  nav .navStrip,
+  nav li {
+    background: rgba(0, 178, 232, 0.8); }
+  nav .upperNav {
+    background: #052451; }
+  nav a {
+    color: inherit; }
+    nav a:hover {
+      color: inherit; }
+
+/* Large tablet, laptop and desktop viewport */
 
 /*# sourceMappingURL=youandmeif.css.map */

@@ -51,9 +51,20 @@ function youandmeif_theme_support() {
     
     // post formats
     add_theme_support('post-formats', array(
-        'aside', 'gallery', 'image', 'status', 'video'));
+        'aside', 'gallery', 'status', 'video', 'link'));
 }
 add_action('after_setup_theme', 'youandmeif_theme_support');
+
+// Add Widget
+function youandmeif_widget() {
+    
+    register_sidebar( array(
+        'name' => 'Footer Sidebar',
+        'id'    => 'sidebar1'
+    ));
+    
+}
+add_action('widgets_init', 'youandmeif_widget');
 
 // Applying Categories to Attachments
 function youandmeif_category_attachments() {
@@ -74,9 +85,17 @@ function youandmeif_childPage() {
     return $post->ID;
 }
 
+// Check page if has children
+function has_children() {
+    global $post;
+    
+    $pages = get_pages('child_of=' . $post->ID);
+    return count($pages);
+}
+
 // Custom excerpt word-count length
 function youandmeif_excerpt_length() {
-    return 40;
+    return 30;
 }
 add_filter('excerpt_length', 'youandmeif_excerpt_length');
 

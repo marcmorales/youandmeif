@@ -15,7 +15,7 @@
 
     } elseif ( is_author() ) {
         the_post();
-        echo 'Author' . $archive . ': ' . get_the_author();
+        echo 'Author ' . $archive . ': ' . get_the_author();
         rewind_posts();
         
     } else {

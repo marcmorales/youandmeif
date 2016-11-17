@@ -1,33 +1,25 @@
 <?php get_header(); ?>
-<hr><hr><hr> <!-- temp -->
+<hr> <!-- temp -->
 <div class="container">
-   <!-- class postArea: Single blog post page -->
+    <!-- class postArea: Single blog post page -->
     <div class="row postArea">
+       
         <?php 
         if( have_posts() ):
-            while( have_posts() ): the_post(); ?>
-
-            <?php
-            get_template_part('content', get_post_format())
-            ?>
-
-            <?php
+            while( have_posts() ): the_post();
+                get_template_part('content', get_post_format());
             endwhile;
-            else :?>
-            <section class="col-sm-6 col-md-4 clearfix youandmeBlog">
-                <div class="thumbnail-img">
-                <img src="<?php bloginfo('template_directory');?>/images/default-banner.png" alt="<?php the_title();?>">
-                </div>
-                <h2>No Content Found</h2>
-                <div class="blogSummary">
-                    <p>Start adding content by clicking <a href="#"><strong>here</strong></a></p>
-                </div>
-            </section>
-            <?php
+        else :
+        ?>
+        
+        <p>TEST</p>
+        
+        <?php
         endif;
         ?>
-    </div>
-</div>
+        
+    </div> <!-- /row -->
+</div> <!-- /container -->
 <?php get_footer(); ?>
 
 

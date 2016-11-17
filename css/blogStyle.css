@@ -13,6 +13,8 @@
       outline: 1px solid orange; }
     .blogArea .youandmeBlog .thumbnail-img .blogSummary {
       outline: 1px solid blue; }
+.blogArea .post-aside {
+  background: pink; }
 
 .wh {
   height: 100% !important; }

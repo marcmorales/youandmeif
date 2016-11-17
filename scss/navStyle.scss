@@ -6,8 +6,6 @@ This stylesheet holds all the styling for the theme's main navigation bar.
 @import 'partials/mixins';
 
 nav {
-    font-size: 1em;
-    color: $white;
     margin: 0 -15px;
     position: fixed;
     width: 100%;
@@ -15,7 +13,6 @@ nav {
         width: 100%;
         height: 2em;
         line-height: 2em;
-        background: $main-blue;
         overflow: hidden;
         .searchform {
             display: none;
@@ -26,7 +23,6 @@ nav {
         line-height: $navHeight;
         text-align: center;
         cursor: pointer;
-        background: $sub-blue;
     }
     .lowerNav {
         margin: 0 -15px;
@@ -39,9 +35,7 @@ nav {
             li {
                 text-align: center;
                 line-height: $navHeight;
-                background: $sub-blue-80;
                 a {
-                    color: $white;
                     display: block;
                     text-decoration: none;
                     border-bottom: 1px solid black;
@@ -79,7 +73,6 @@ nav {
             position: fixed;
             height: $navHeight;
             width: 100%;
-            background: $sub-blue-80;
         }
         .navMenu {
             display: none;
