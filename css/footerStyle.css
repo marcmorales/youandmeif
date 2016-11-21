@@ -1,0 +1,27 @@
+footer {
+  background: #052451;
+  color: white; }
+  footer ul {
+    padding: 0; }
+    footer ul li {
+      list-style-type: none; }
+  footer hr {
+    border-color: #052451;
+    box-shadow: 0 1px 2px #020f21; }
+  footer .main-column,
+  footer .secondary-column,
+  footer .lowerFooter {
+    text-align: center; }
+  footer .menu-footer-navigation-container li {
+    display: inline-block;
+    padding: 0 10px 0 0; }
+    footer .menu-footer-navigation-container li:not(:last-child) {
+      border-right: 1px solid #020f21; }
+
+@media screen and (min-width: 992px) {
+  footer .main-column,
+  footer .secondary-column,
+  footer .lowerFooter {
+    text-align: left; } }
+
+/*# sourceMappingURL=footerStyle.css.map */

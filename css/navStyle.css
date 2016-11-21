@@ -13,12 +13,17 @@ nav {
     nav .upperNav .searchform {
       display: none; }
   nav .navMenu {
-    height: 3em;
-    line-height: 3em;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     cursor: pointer; }
+    nav .navMenu img {
+      width: 150px;
+      height: auto; }
   nav .lowerNav {
     margin: 0 -15px; }
+    nav .lowerNav .logo-placeholder {
+      display: none; }
     nav .lowerNav ul {
       max-height: 0;
       margin: 0;
@@ -27,11 +32,11 @@ nav {
       overflow: hidden; }
       nav .lowerNav ul li {
         text-align: center;
-        line-height: 3em; }
+        line-height: 50px; }
         nav .lowerNav ul li a {
           display: block;
           text-decoration: none;
-          border-bottom: 1px solid black; }
+          border-bottom: 1px solid #052451; }
 
 .navScroll {
   max-height: 100% !important; }
@@ -39,7 +44,7 @@ nav {
 .subMenuIcon {
   position: relative;
   height: 0;
-  bottom: 3em;
+  bottom: 50px;
   left: 5.5em;
   cursor: pointer; }
   .subMenuIcon span {
@@ -52,31 +57,42 @@ nav {
     border-radius: 0.5em; }
 
 @media screen and (min-width: 768px) {
-  nav .navStrip {
+  .navStrip {
     position: fixed;
-    height: 3em;
+    height: 50px;
     width: 100%; }
+
   nav .navMenu {
     display: none; }
   nav .upperNav .searchform {
     display: block;
     float: right;
+    margin-left: 5px;
     color: black;
-    font-size: 12px; }
+    font-size: 0.8em; }
     nav .upperNav .searchform input {
       height: 1.5em;
       line-height: normal;
       font-weight: normal;
       border: none; }
     nav .upperNav .searchform .screen-reader-text {
-      opacity: 0; }
+      opacity: 0;
+      position: absolute; }
     nav .upperNav .searchform .search-submit {
       color: white;
       background-color: #00b2e8; }
+  nav .lowerNav .menu-header-navigation-container {
+    float: right; }
+  nav .lowerNav .logo-placeholder {
+    display: block;
+    float: left;
+    position: relative; }
+    nav .lowerNav .logo-placeholder img {
+      width: 150px;
+      height: auto; }
   nav .lowerNav .menu > li {
     float: left;
-    display: block;
-    background: none; }
+    display: block; }
   nav .lowerNav ul {
     max-height: none;
     overflow: visible; }

@@ -1,8 +1,11 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 @import 'navStyle';
-@import 'homeStyle';
+@import 'pageStyle';
 @import 'blogStyle';
+@import 'footerStyle';
+@import 'customCSS/about';
+@import 'customCSS/nav';
 
 /*
 =====================================================================================
@@ -18,7 +21,7 @@ body {
     a {
         color: $sub-blue;
         &:hover {
-            color: $sub-blue-80;
+            color: $sub-blue;
         }
     }
 }
@@ -28,12 +31,21 @@ body {
 nav {    
     color: $white;
     .navMenu,
-    .navStrip,
-    li {
-        background: $sub-blue-80;
-    }    
+    .navStrip {
+        background: $sub-blue;
+    } 
     .upperNav {
         background: $main-blue;
+    }
+    .lowerNav {
+        ul {
+            li {
+                background: $sub-blue;
+                &:hover {
+                    background: $main-green;
+                }
+            }
+        }
     }
     a {
     color: inherit;
@@ -45,5 +57,4 @@ nav {
 
 /* Large tablet, laptop and desktop viewport */
 @media screen and (min-width: 768px) {
-    
 }

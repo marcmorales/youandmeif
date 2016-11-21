@@ -18,6 +18,8 @@ function youandmeif_script_enqueue() {
     wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', false, '2.2.4');
     wp_enqueue_script('jquery');
     wp_enqueue_script('youandmeifjs', get_template_directory_uri() . '/js/youandmeif.js', array(), '1.0.0', true);
+    // custom js
+    wp_enqueue_script('mycustom', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
     
 }
 add_action('wp_enqueue_scripts', 'youandmeif_script_enqueue');
@@ -42,7 +44,14 @@ add_action('init', 'youandmeif_theme_setup');
 // Theme supports
 function youandmeif_theme_support() {
     
-    // front-page banner
+    // Page banner and logo
+    add_theme_support('custom-logo', array(
+        'height'        => 100,
+        'width'         => 300,
+        'flex-height'   => true,
+        'flex-width'    => true,
+        'header-text'   => array('site-title', 'site-description')
+    ));
     add_theme_support('custom-header');
     
     // featured image support
@@ -57,6 +66,16 @@ add_action('after_setup_theme', 'youandmeif_theme_support');
 
 // Add Widget
 function youandmeif_widget() {
+    
+    register_sidebar( array(
+        'name' => 'Header Links',
+        'id'    => 'link1'
+    ));
+    
+    register_sidebar( array(
+        'name' => 'Footer Contact',
+        'id'    => 'sidebar2'
+    ));
     
     register_sidebar( array(
         'name' => 'Footer Sidebar',

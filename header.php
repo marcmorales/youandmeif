@@ -21,6 +21,7 @@ endif;
 ?>
 
 <body <?php body_class( $youandmeClass ); ?>>
+    
    <!--  Main navigation -->
     <header class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
@@ -28,25 +29,52 @@ endif;
             <!-- Holds quick links for Social Media and the Search bar -->
              <div class="upperNav">
                  <div class="container">
-                    <?php get_search_form();?>
+                   <?php get_search_form();?>
+                   
+                   <div class="header-widget">
+                       <?php dynamic_sidebar('link1');?>
+                   </div>
+                   
+                   
+                    
                  </div>
              </div>
              
-             <!-- Main navbar backdrop color -->
-              <div class="navStrip"></div>
+            <!-- Main navbar backdrop color -->
+            <div class="navStrip"></div>
               
               <!-- Navbar list items -->
                <div class="lowerNav">
                    <div class="container">
-                       
+                      
+                       <div class="logo-placeholder">
+                               <?php the_custom_logo(); ?>
+                           </div>  
                         <?php 
                        // Generate menu from WordPress dashboard
                         $args = array('theme_location' => 'primary');
                         wp_nav_menu( $args ); 
                         ?>
                         
+                        
                         <!-- Menu toggle button for smartphone viewport -->
-                        <div class="navMenu">Menu</div>
+                        <div class="navMenu">
+                         
+                          <?php 
+                            if ( has_custom_logo() ) { ?>
+                               
+                                <img src="<?php
+                                     $custom_logo_id = get_theme_mod( 'custom_logo' );
+                                     $image = wp_get_attachment_image_src($custom_logo_id, 'full');
+                                     
+                                     echo $image[0];?>">
+                             <?php
+                            } else {
+                                echo 'Menu';
+                            }
+                            ?>
+                            
+                        </div>
                     </div>
                 </div>
            </nav>

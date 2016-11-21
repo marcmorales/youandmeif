@@ -1,0 +1,48 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+/* Page header */
+#bannerImage {
+    height: 50vh;
+    overflow: hidden;
+    @include header-bg;
+    @include header-shadow-inset (0.40);
+}
+
+/* Page titles (parent/child) */
+.page-title {
+    color: $white;
+    text-align: center;
+}
+.parent-page-title {
+    line-height: 35vh;
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+.page-menu {
+    // reset default Bootstrap gutter
+    .col-sm-6,
+    .col-md-3 {
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+    }
+}
+.child-page-list {
+    text-align: center;
+    list-style-type: none;
+    li {
+        display: table;
+        margin-bottom: 5px;
+        a {
+            display: table-cell;
+            height: 50px;
+            vertical-align: middle;
+            background: $main-green;
+        }
+    }
+}

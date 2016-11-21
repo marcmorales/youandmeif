@@ -3,11 +3,12 @@ $white: rgb(255, 255, 255);
 $sub-blue: rgb(0, 178, 232); // lightblue, hex = #00b2e8
 $main-blue: rgb(5, 36, 81); // darkblue, hex = #052451
 $main-green: rgb(62, 232, 0); // yellowgreen hex = #3ee800
-
-// w/ 80% opacity
-$sub-blue-80: rgba(0, 178, 232, 0.8);
-$main-blue-80: rgba(5, 36, 81, 0.8);
-$main-green-80: rgba(62, 232, 0, 0.8);
+$light-gray: rgb(169, 169, 169); // light-gray = #A9A9A9;
+$dark-blue: rgb(2, 15, 33); // dark-gray = #020f21;
 
 // main navbar height
-$navHeight: 3em;
+$navHeight: 50px; //3em
+
+// font size
+$sm-font: 0.8em;
+$md-font: 1em;

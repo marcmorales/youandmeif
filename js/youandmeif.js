@@ -12,9 +12,11 @@ $(document).ready(function() {
         Navigation functions
     ===============================
     */
-    function youAndMeGen() {
+    // Header navigation
+    function youAndMeHeadNav() {
         
         var navUl = $("nav .menu");
+        
         
         //main nav menu toggle for mobile and tablet
         $(".navMenu").click(function() {
@@ -48,8 +50,34 @@ $(document).ready(function() {
         }
         navResponsive();                
     }
-    youAndMeGen();
+    youAndMeHeadNav();
     
+    // Page navigation
+    function youandmePageNav() {
+        var childPageTitle = $(".child-page-title"),
+            childPageList = $(".child-page-list"),
+            childPageTitleRow = childPageTitle.parent(),
+            childPageListRow = childPageList.parent();
+        
+        childPageTitleRow.prependTo(".page-content");
+        childPageListRow.prependTo(".page-content");
+        childPageList.children().each(function() {
+            $(this).addClass("col-xs-12 col-sm-6 col-md-3");
+        });
+        
+    }
+    youandmePageNav();
+    
+    // footer navigation
+    function youandmeFooterNav() {
+        var widget = $(".secondary-column .widget");
+        
+        widget.each(function() {
+            $(this).addClass("col-md-6");
+            $(this).addClass("clearfix");
+        });
+    }
+    youandmeFooterNav();
     /*
     ===============================
             Blog functions

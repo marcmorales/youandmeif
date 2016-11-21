@@ -17,15 +17,23 @@ nav {
         .searchform {
             display: none;
         }
+        
     }
     .navMenu {
         height: $navHeight;
         line-height: $navHeight;
         text-align: center;
         cursor: pointer;
+        img {
+            width: 150px;
+            height: auto;
+        }
     }
     .lowerNav {
         margin: 0 -15px;
+        .logo-placeholder {
+            display: none;
+        }
         ul {
             max-height: 0;
             margin: 0;
@@ -38,7 +46,7 @@ nav {
                 a {
                     display: block;
                     text-decoration: none;
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid $main-blue;
                 }
             }
         }
@@ -52,7 +60,7 @@ nav {
 .subMenuIcon {
     position: relative;
     height: 0;
-    bottom: $navHeight; //-3.04em
+    bottom: $navHeight;
     left: 5.5em;
     cursor: pointer;
     span {
@@ -68,12 +76,12 @@ nav {
 
 
 @media screen and (min-width: 768px) {
-    nav {
-        .navStrip {
+    .navStrip {
             position: fixed;
             height: $navHeight;
             width: 100%;
-        }
+    }
+    nav {
         .navMenu {
             display: none;
         }
@@ -81,8 +89,9 @@ nav {
             .searchform {
                 display: block;
                 float: right;
+                margin-left: 5px;
                 color: black;
-                font-size: 12px;
+                font-size: $sm-font;
                 input {
                     height: 1.5em;
                     line-height: normal;
@@ -91,6 +100,7 @@ nav {
                 }
                 .screen-reader-text {
                     opacity: 0;
+                    position: absolute;
                 }
                 .search-submit {
                     color: $white;
@@ -99,11 +109,22 @@ nav {
             }
         }
         .lowerNav {
+            .menu-header-navigation-container {
+                float: right;
+            }
+            .logo-placeholder {
+                display: block;
+                float: left;
+                position: relative;
+                img {
+                    width: 150px;
+                    height: auto;
+                }
+            }
             .menu {
                 > li { //parent menu-list
                     float: left;
                     display: block;
-                    background: none;
                 }
             }
             ul {
