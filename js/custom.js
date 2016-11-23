@@ -4,5 +4,5 @@ $(document).ready(function() {
         
         lastMenuItem.css("background", "#3ee800")
     }
-    modMenu();
+//    modMenu();
 });

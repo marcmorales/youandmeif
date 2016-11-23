@@ -29,14 +29,22 @@ endif;
             <!-- Holds quick links for Social Media and the Search bar -->
              <div class="upperNav">
                  <div class="container">
-                   <?php get_search_form();?>
-                   
-                   <div class="header-widget">
-                       <?php dynamic_sidebar('link1');?>
-                   </div>
-                   
-                   
-                    
+                  <div class="row">
+                   <div class="col-xs-6 col-sm-4 header-widget">
+                          <?php dynamic_sidebar('link1');?> 
+                      </div>
+                    <div class="col-xs-6 col-sm-8">
+                      <?php get_search_form();
+                        
+                       // Generate secondary menu from WordPress dashboard
+                        $args = array('theme_location' => 'secondary');
+                        wp_nav_menu( $args ); 
+                        ?>
+                       </div>
+                     
+                      
+                       
+                  </div>
                  </div>
              </div>
              
@@ -51,7 +59,7 @@ endif;
                                <?php the_custom_logo(); ?>
                            </div>  
                         <?php 
-                       // Generate menu from WordPress dashboard
+                       // Generate main menu from WordPress dashboard
                         $args = array('theme_location' => 'primary');
                         wp_nav_menu( $args ); 
                         ?>

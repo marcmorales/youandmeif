@@ -7,7 +7,7 @@
 if(have_posts()) :
     while (have_posts()) : the_post(); ?>
 
-        <div id="bannerImage" style="background: url('<?php header_image();?>') no-repeat fixed center center;">
+        <div id="bannerImage" style="background: url('<?php header_image();?>') no-repeat scroll center center;">
             <div class="container page-title">
 
             <?php

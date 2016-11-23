@@ -35,8 +35,9 @@ function  youandmeif_theme_setup() {
     add_theme_support('menus');
     
     register_nav_menus( array(
-    'primary' => __('You&Me Primary Menu'),
-    'footer' => __('You&Me Footer Menu'),
+    'primary'   => __('You&Me Primary Menu'),
+    'secondary' => __('You&Me Secondary Menu'),
+    'footer'    => __('You&Me Footer Menu'),
     ));
 }
 add_action('init', 'youandmeif_theme_setup');
@@ -52,7 +53,14 @@ function youandmeif_theme_support() {
         'flex-width'    => true,
         'header-text'   => array('site-title', 'site-description')
     ));
-    add_theme_support('custom-header');
+    
+    $defHeader = array(
+        'height'        => 600,
+        'width'         => 1200,
+        'default-image' => get_template_directory_uri() . '/images/default/office.jpeg',
+        'uploads'       => true
+    );
+    add_theme_support( 'custom-header', $defHeader );
     
     // featured image support
     add_theme_support('post-thumbnails');
@@ -118,3 +126,24 @@ function youandmeif_excerpt_length() {
 }
 add_filter('excerpt_length', 'youandmeif_excerpt_length');
 
+// ===================================================== //
+// Additional custom functions for You&Me Int Foundation //
+// ===================================================== //
+
+// Adding editable features for the frontpage
+function youandmeif_fp_callout( $wp_customize ) {
+    
+    $wp_customize->add_section('unme-fp-intro', array(
+        'title' => 'Front Page Intro'
+    ));
+    
+    $wp_customize->add_setting('unme-fp-headline', array(
+        'default'   => 'Headline Text'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-headline-control', array(
+        'label' => 'Headline',
+        'section'   => 'unme-fp-headline-section',
+        'settings'  => 'unme-fp-headline'    
+    )));
+}
+add_action('customize_register', 'youandmeif_fp_callout');

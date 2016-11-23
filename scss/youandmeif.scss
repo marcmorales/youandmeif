@@ -4,6 +4,7 @@
 @import 'pageStyle';
 @import 'blogStyle';
 @import 'footerStyle';
+@import 'customCSS/home';
 @import 'customCSS/about';
 @import 'customCSS/nav';
 
@@ -19,9 +20,11 @@ All CSS listed here can be modified in WP Admin Dashboard
 html,
 body {
     a {
-        color: $sub-blue;
+        color: $jungle-green;
+        
         &:hover {
-            color: $sub-blue;
+            color: $lime-green;
+            text-decoration: none;
         }
     }
 }
@@ -32,17 +35,32 @@ nav {
     color: $white;
     .navMenu,
     .navStrip {
-        background: $sub-blue;
+        background: $jungle-green;
     } 
     .upperNav {
-        background: $main-blue;
+        background: $blue-wood;
+        .menu-secondary-menu-container {
+            color: $jungle-green;
+            &:hover {
+                color: $lime-green;
+            }
+        }
+        .searchform {
+            #searchsubmit {
+                color: $white;
+                background-color: $jungle-green;
+                &:hover {
+                    background-color: $lime-green;
+                }
+            }
+        }
     }
     .lowerNav {
         ul {
             li {
-                background: $sub-blue;
+                background: $jungle-green;
                 &:hover {
-                    background: $main-green;
+                    background: $lime-green;
                 }
             }
         }
@@ -52,6 +70,36 @@ nav {
         &:hover {
             color: inherit;
         }
+    }
+}
+
+/* General Page */
+
+.page-title {
+    color: $white;
+}
+
+.child-page-list {
+    li {
+        
+        a {
+            color: $white;
+            background: $jungle-green;
+            &:hover {
+                background: $lime-green;
+            }
+        }
+    }
+}
+
+/* Footer */
+
+footer {
+    color: $white;
+    background-color: $blue-wood;
+    hr {
+        border-color: $regent-gray;
+//        @include hr-shadow(1.0);
     }
 }
 

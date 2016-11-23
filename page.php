@@ -3,12 +3,12 @@
 if(have_posts()) :
     while (have_posts()) : the_post(); ?>
 
-        <div id="bannerImage" style="background: url('<?php header_image();?>') no-repeat fixed center center;">
+        <div id="bannerImage" style="background: url('<?php header_image();?>') no-repeat scroll center center;">
             <div class="container page-title">
 
             <?php
             // has_children() and youandmeif_childPage() are under functions.php
-            // Check if current page has child pages
+            // Checks if current page has child pages
             if (has_children() OR $post->post_parent > 0) {
             ?>
 

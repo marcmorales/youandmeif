@@ -1,0 +1,51 @@
+.eventList {
+  background: #8a949b; }
+  .eventList .eventPost {
+    overflow: hidden;
+    margin-bottom: 15px; }
+    .eventList .eventPost .img-box {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      -ms-background-size: cover !important;
+      -o-background-size: cover !important;
+      background-size: cover !important;
+      overflow: hidden; }
+      .eventList .eventPost .img-box:hover .img-overlay {
+        background: rgba(36, 55, 67, 0.3); }
+      .eventList .eventPost .img-box .post-title {
+        float: left;
+        margin: 0;
+        padding: 15px 15px;
+        background: rgba(36, 55, 67, 0.3); }
+        .eventList .eventPost .img-box .post-title a {
+          color: white; }
+      .eventList .eventPost .img-box .post-excerpt {
+        float: left;
+        position: absolute;
+        margin: 0;
+        padding: 15px;
+        bottom: 0;
+        background: rgba(36, 55, 67, 0.3);
+        box-sizing: border-box; }
+      .eventList .eventPost .img-box .img-overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(36, 55, 67, 0.1); }
+  .eventList .moreEvents {
+    margin: 0 auto;
+    width: 200px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 30px;
+    background: #28b78d; }
+    .eventList .moreEvents:hover {
+      background: #34d37c; }
+    .eventList .moreEvents a {
+      display: block;
+      color: #fafafa; }
+
+/*# sourceMappingURL=home.css.map */

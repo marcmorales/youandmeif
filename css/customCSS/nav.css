@@ -1,10 +1,14 @@
-nav .upperNav .header-widget {
-  float: right; }
-  nav .upperNav .header-widget ul {
-    margin: 0;
-    padding: 0; }
-  nav .upperNav .header-widget li {
-    display: inline-block;
-    margin: 0; }
+nav .upperNav .header-widget ul {
+  margin: 0;
+  padding: 0; }
+nav .upperNav .header-widget li {
+  margin: 0;
+  list-style: none; }
+nav .lowerNav .menu > li:last-child {
+  background: #34d37c; }
+
+@media screen and (min-width: 768px) {
+  .lowerNav .menu > li:first-child {
+    display: none; } }
 
 /*# sourceMappingURL=nav.css.map */

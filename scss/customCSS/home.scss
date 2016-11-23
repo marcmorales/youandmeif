@@ -1,0 +1,61 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+
+.eventList {
+    background: $regent-gray;
+    .eventPost {
+        overflow: hidden;
+        margin-bottom: 15px;
+        .img-box {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            @include header-bg;
+            overflow: hidden;
+            &:hover {
+                .img-overlay {
+                    background: rgba(36, 55, 67, 0.3);
+                }
+            }
+            .post-title {
+                float: left;
+                margin: 0;
+                padding: 15px 15px;
+                background: rgba(36, 55, 67, 0.3);
+                a {
+                    color: white;
+                }
+            }
+            .post-excerpt {
+                float: left;
+                position: absolute;
+                margin: 0;
+                padding: 15px;
+                bottom: 0;
+                background: rgba(36, 55, 67, 0.3);
+                box-sizing: border-box;
+            }
+            .img-overlay {
+                width: 100%;
+                height: 100%;
+                background: rgba(36, 55, 67, 0.1);
+            }
+        }
+    } // event-post
+    .moreEvents {
+        margin: 0 auto;
+        width: 200px;
+        height: 75px;
+        text-align: center;
+        line-height: 75px;
+        margin-bottom: 30px;
+        background: $jungle-green;
+        &:hover {
+            background: $lime-green;
+        }
+        a {
+            display: block;
+            color: $white;
+        }
+    }
+} // event-list

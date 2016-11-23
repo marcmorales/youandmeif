@@ -12,6 +12,14 @@ nav {
     overflow: hidden; }
     nav .upperNav .searchform {
       display: none; }
+    nav .upperNav .menu-secondary-menu-container {
+      float: right;
+      font-size: 0.8em; }
+      nav .upperNav .menu-secondary-menu-container ul {
+        margin: 0;
+        padding: 0; }
+        nav .upperNav .menu-secondary-menu-container ul li {
+          list-style: none; }
   nav .navMenu {
     height: 50px;
     line-height: 50px;
@@ -35,8 +43,7 @@ nav {
         line-height: 50px; }
         nav .lowerNav ul li a {
           display: block;
-          text-decoration: none;
-          border-bottom: 1px solid #052451; }
+          text-decoration: none; }
 
 .navScroll {
   max-height: 100% !important; }
@@ -67,7 +74,7 @@ nav {
   nav .upperNav .searchform {
     display: block;
     float: right;
-    margin-left: 5px;
+    margin-left: 10px;
     color: black;
     font-size: 0.8em; }
     nav .upperNav .searchform input {
@@ -78,9 +85,6 @@ nav {
     nav .upperNav .searchform .screen-reader-text {
       opacity: 0;
       position: absolute; }
-    nav .upperNav .searchform .search-submit {
-      color: white;
-      background-color: #00b2e8; }
   nav .lowerNav .menu-header-navigation-container {
     float: right; }
   nav .lowerNav .logo-placeholder {

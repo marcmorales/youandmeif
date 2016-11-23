@@ -13,7 +13,6 @@
 
 /* Page titles (parent/child) */
 .page-title {
-  color: white;
   text-align: center; }
 
 .parent-page-title {
@@ -38,7 +37,7 @@
     .child-page-list li a {
       display: table-cell;
       height: 50px;
-      vertical-align: middle;
-      background: #3ee800; }
+      text-decoration: none;
+      vertical-align: middle; }
 
 /*# sourceMappingURL=pageStyle.css.map */

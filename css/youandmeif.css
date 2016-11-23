@@ -12,6 +12,14 @@ nav {
     overflow: hidden; }
     nav .upperNav .searchform {
       display: none; }
+    nav .upperNav .menu-secondary-menu-container {
+      float: right;
+      font-size: 0.8em; }
+      nav .upperNav .menu-secondary-menu-container ul {
+        margin: 0;
+        padding: 0; }
+        nav .upperNav .menu-secondary-menu-container ul li {
+          list-style: none; }
   nav .navMenu {
     height: 50px;
     line-height: 50px;
@@ -35,8 +43,7 @@ nav {
         line-height: 50px; }
         nav .lowerNav ul li a {
           display: block;
-          text-decoration: none;
-          border-bottom: 1px solid #052451; }
+          text-decoration: none; }
 
 .navScroll {
   max-height: 100% !important; }
@@ -67,7 +74,7 @@ nav {
   nav .upperNav .searchform {
     display: block;
     float: right;
-    margin-left: 5px;
+    margin-left: 10px;
     color: black;
     font-size: 0.8em; }
     nav .upperNav .searchform input {
@@ -78,9 +85,6 @@ nav {
     nav .upperNav .searchform .screen-reader-text {
       opacity: 0;
       position: absolute; }
-    nav .upperNav .searchform .search-submit {
-      color: white;
-      background-color: #00b2e8; }
   nav .lowerNav .menu-header-navigation-container {
     float: right; }
   nav .lowerNav .logo-placeholder {
@@ -126,7 +130,6 @@ nav {
 
 /* Page titles (parent/child) */
 .page-title {
-  color: white;
   text-align: center; }
 
 .parent-page-title {
@@ -151,8 +154,8 @@ nav {
     .child-page-list li a {
       display: table-cell;
       height: 50px;
-      vertical-align: middle;
-      background: #3ee800; }
+      text-decoration: none;
+      vertical-align: middle; }
 
 .blogArea .youandmeBlog {
   background: #abc;
@@ -178,40 +181,87 @@ nav {
 .ww {
   width: 100% !important; }
 
-footer {
-  background: #052451;
-  color: white; }
-  footer ul {
-    padding: 0; }
-    footer ul li {
-      list-style-type: none; }
-  footer hr {
-    border-color: #052451;
-    box-shadow: 0 1px 2px #020f21; }
-  footer .main-column,
-  footer .secondary-column,
-  footer .lowerFooter {
-    text-align: center; }
-  footer .menu-footer-navigation-container li {
-    display: inline-block;
-    padding: 0 10px 0 0; }
-    footer .menu-footer-navigation-container li:not(:last-child) {
-      border-right: 1px solid #020f21; }
+footer ul {
+  padding: 0; }
+  footer ul li {
+    list-style-type: none; }
+footer .main-column,
+footer .secondary-column,
+footer .lowerFooter {
+  text-align: center; }
+footer .menu-footer-navigation-container li {
+  display: inline-block;
+  padding: 0 10px 0 0; }
+  footer .menu-footer-navigation-container li:not(:last-child) {
+    border-right: 1px solid black; }
 
 @media screen and (min-width: 992px) {
   footer .main-column,
   footer .secondary-column,
   footer .lowerFooter {
     text-align: left; } }
-nav .upperNav .header-widget {
-  float: right; }
-  nav .upperNav .header-widget ul {
-    margin: 0;
-    padding: 0; }
-  nav .upperNav .header-widget li {
-    display: inline-block;
-    margin: 0; }
+.eventList {
+  background: #8a949b; }
+  .eventList .eventPost {
+    overflow: hidden;
+    margin-bottom: 15px; }
+    .eventList .eventPost .img-box {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      -ms-background-size: cover !important;
+      -o-background-size: cover !important;
+      background-size: cover !important;
+      overflow: hidden; }
+      .eventList .eventPost .img-box:hover .img-overlay {
+        background: rgba(36, 55, 67, 0.3); }
+      .eventList .eventPost .img-box .post-title {
+        float: left;
+        margin: 0;
+        padding: 15px 15px;
+        background: rgba(36, 55, 67, 0.3); }
+        .eventList .eventPost .img-box .post-title a {
+          color: white; }
+      .eventList .eventPost .img-box .post-excerpt {
+        float: left;
+        position: absolute;
+        margin: 0;
+        padding: 15px;
+        bottom: 0;
+        background: rgba(36, 55, 67, 0.3);
+        box-sizing: border-box; }
+      .eventList .eventPost .img-box .img-overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(36, 55, 67, 0.1); }
+  .eventList .moreEvents {
+    margin: 0 auto;
+    width: 200px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 30px;
+    background: #28b78d; }
+    .eventList .moreEvents:hover {
+      background: #34d37c; }
+    .eventList .moreEvents a {
+      display: block;
+      color: #fafafa; }
 
+nav .upperNav .header-widget ul {
+  margin: 0;
+  padding: 0; }
+nav .upperNav .header-widget li {
+  margin: 0;
+  list-style: none; }
+nav .lowerNav .menu > li:last-child {
+  background: #34d37c; }
+
+@media screen and (min-width: 768px) {
+  .lowerNav .menu > li:first-child {
+    display: none; } }
 /*
 =====================================================================================
 You & Me International Foundation default CSS settings
@@ -221,27 +271,54 @@ All CSS listed here can be modified in WP Admin Dashboard
 /* General Colors */
 html a,
 body a {
-  color: #00b2e8; }
+  color: #28b78d; }
   html a:hover,
   body a:hover {
-    color: #00b2e8; }
+    color: #34d37c;
+    text-decoration: none; }
 
 /* Navigation */
 nav {
-  color: white; }
+  color: #fafafa; }
   nav .navMenu,
   nav .navStrip {
-    background: #00b2e8; }
+    background: #28b78d; }
   nav .upperNav {
-    background: #052451; }
+    background: #243743; }
+    nav .upperNav .menu-secondary-menu-container {
+      color: #28b78d; }
+      nav .upperNav .menu-secondary-menu-container:hover {
+        color: #34d37c; }
+    nav .upperNav .searchform #searchsubmit {
+      color: #fafafa;
+      background-color: #28b78d; }
+      nav .upperNav .searchform #searchsubmit:hover {
+        background-color: #34d37c; }
   nav .lowerNav ul li {
-    background: #00b2e8; }
+    background: #28b78d; }
     nav .lowerNav ul li:hover {
-      background: #3ee800; }
+      background: #34d37c; }
   nav a {
     color: inherit; }
     nav a:hover {
       color: inherit; }
+
+/* General Page */
+.page-title {
+  color: #fafafa; }
+
+.child-page-list li a {
+  color: #fafafa;
+  background: #28b78d; }
+  .child-page-list li a:hover {
+    background: #34d37c; }
+
+/* Footer */
+footer {
+  color: #fafafa;
+  background-color: #243743; }
+  footer hr {
+    border-color: #8a949b; }
 
 /* Large tablet, laptop and desktop viewport */
 

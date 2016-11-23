@@ -78,6 +78,7 @@ $(document).ready(function() {
         });
     }
     youandmeFooterNav();
+    
     /*
     ===============================
             Blog functions
@@ -87,7 +88,7 @@ $(document).ready(function() {
     var newBlog = youandmeBlog.first(),
         blogImgWrap = $(".thumbnail-img");
     
-    // resize latest post to full width of it's container class
+    // resize latest post to the full width of it's container class
     function blogMediumLayout() {
         
         if(window.innerWidth >= 992) {
