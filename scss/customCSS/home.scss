@@ -1,8 +1,89 @@
 @import '../partials/variables';
 @import '../partials/mixins';
 
+// Intro Section
+.introduction {
+    margin-top: 15px;
+    .fp-intro {
+        height: 250px;
+        .img-background {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            @include header-bg;
+            .intro-text {
+                float: right;
+                position: relative;
+                padding: 0 15px 15px 15px;
+                width: 100%;
+                height: 100%;
+                background: rgba(36, 55, 67, 0.8);
+                .link {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                    width: 150px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .second {
+        .area {
+            float: left;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0 15px 15px 15px;
+            .link {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                width: 150px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                a {
+                    display: block;
+                }
+            }
+        }
+        .left {
+
+        }
+        .right {
+
+        }
+    }
+    .quote-area {
+        margin: 60px 0;
+        text-align: center;
+    }
+}
+
+// Program Section
+.programList {
+    .is-table-row {
+        .area {
+            .box {
+                border: 1px solid blue;
+                background: #ccc;
+                margin-bottom: 15px;
+                padding: 0 15px;
+            }
+        }    
+    }
+    
+}
+
+// Event Section
 .eventList {
-    background: $regent-gray;
+    
     .eventPost {
         overflow: hidden;
         margin-bottom: 15px;
@@ -59,3 +140,73 @@
         }
     }
 } // event-list
+
+.section-card {
+    font-size: 30px;
+    text-align: center;
+}
+
+// bootstrap small
+@media screen and (min-width: 576px) {
+    // into section
+    .introduction {
+        .fp-intro {
+            .img-background {
+                .intro-text {
+                    width: 50%;
+                }
+            }
+        }
+        .second {
+            .area {
+                width: 50%;
+            }
+        }
+    }
+    
+    .programList {
+        .container {
+            margin-bottom: 15px;
+        }
+        .is-table-row {
+            display: table;
+            height: 100%;
+            .area {
+                float: none;
+                display: table-cell;
+                width: 50%;
+                height: 100%;
+                vertical-align: top;
+                .box {
+                    display: table;
+                    height: 100%;
+                    margin-bottom: 0;
+                }
+                .second {
+                    margin-bottom: 15px;
+                }
+            }
+            .left {
+                padding-right: 7.5px;
+            }
+            .right {
+                padding-left: 7.5px;
+            }
+        }
+        
+    }
+}
+
+// bootstrap med
+@media screen and (min-width: 992px) {
+    // into section
+    .introduction {
+        .main {
+            padding-right: 7.5px;
+        }
+        .second {
+            padding-left: 7.5px;
+        }
+    }
+    
+}

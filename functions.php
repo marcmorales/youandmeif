@@ -134,16 +134,118 @@ add_filter('excerpt_length', 'youandmeif_excerpt_length');
 function youandmeif_fp_callout( $wp_customize ) {
     
     $wp_customize->add_section('unme-fp-intro', array(
-        'title' => 'Front Page Intro'
+        'title' => 'FrontPage Intro'
     ));
     
+    // Who we are section
     $wp_customize->add_setting('unme-fp-headline', array(
-        'default'   => 'Headline Text'
+    'default'   => 'Headline Text'
     ));
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-headline-control', array(
         'label' => 'Headline',
-        'section'   => 'unme-fp-headline-section',
+        'section'   => 'unme-fp-intro',
         'settings'  => 'unme-fp-headline'    
+    )));
+
+    $wp_customize->add_setting('unme-fp-txt', array(
+        'default'   => 'Sample paragraph text'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-txt-control', array(
+        'label' => 'Headline Description',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-txt',
+        'type'  => 'textarea'
+    )));
+
+    $wp_customize->add_setting('unme-fp-link');
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-link-control', array(
+        'label' => 'Link',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-link',
+        'type'  => 'dropdown-pages'
+    )));
+
+    $wp_customize->add_setting('unme-fp-img');
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control($wp_customize, 'unme-fp-img-control', array(
+        'label' => 'Image',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-img',
+        'width'     => 500,
+        'height'    => 250,
+        'flex-width'    => true,
+        'flex-height'    => true,
+    )));
+    
+    // what and why section
+    // what section
+    $wp_customize->add_setting('unme-fp-head2', array(
+        'default'   => 'Headline Text'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-head2-control', array(
+        'label' => 'Headline 2',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-head2'    
+    )));
+    
+    $wp_customize->add_setting('unme-fp-txt-head2', array(
+        'default'   => 'Sample paragraph text two'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-txt-head2-control', array(
+        'label' => 'Headline Description two',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-txt-head2',
+        'type'  => 'textarea'
+    )));
+    
+    $wp_customize->add_setting('unme-fp-link-head2');
+    
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-link-head2-control', array(
+        'label' => 'Link',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-link-head2',
+        'type'  => 'dropdown-pages'
+    )));
+    
+    // why section
+    $wp_customize->add_setting('unme-fp-head3', array(
+        'default'   => 'Headline Text'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-head3-control', array(
+        'label' => 'Headline 3',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-head3'    
+    )));
+    
+    $wp_customize->add_setting('unme-fp-txt-head3', array(
+        'default'   => 'Sample paragraph text three'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-txt-head3-control', array(
+        'label' => 'Headline Description three',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-txt-head3',
+        'type'  => 'textarea'
+    )));
+    
+    $wp_customize->add_setting('unme-fp-link-head3');
+    
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-link-head3-control', array(
+        'label' => 'Link',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-link-head3',
+        'type'  => 'dropdown-pages'
+    )));
+    
+    // quote section
+    $wp_customize->add_setting('unme-fp-quote', array(
+        'default'   => 'Quote section'
+    ));
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'unme-fp-txt-head3-control', array(
+        'label' => 'Quote section here',
+        'section'   => 'unme-fp-intro',
+        'settings'  => 'unme-fp-quote',
+        'type'  => 'textarea'
     )));
 }
 add_action('customize_register', 'youandmeif_fp_callout');

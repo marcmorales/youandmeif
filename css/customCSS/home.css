@@ -1,51 +1,142 @@
-.eventList {
-  background: #8a949b; }
-  .eventList .eventPost {
-    overflow: hidden;
-    margin-bottom: 15px; }
-    .eventList .eventPost .img-box {
-      position: relative;
+.introduction {
+  margin-top: 15px; }
+  .introduction .fp-intro {
+    height: 250px; }
+    .introduction .fp-intro .img-background {
       width: 100%;
-      height: 250px;
+      height: 100%;
+      overflow: hidden;
       -webkit-background-size: cover !important;
       -moz-background-size: cover !important;
       -ms-background-size: cover !important;
       -o-background-size: cover !important;
-      background-size: cover !important;
-      overflow: hidden; }
-      .eventList .eventPost .img-box:hover .img-overlay {
-        background: rgba(36, 55, 67, 0.3); }
-      .eventList .eventPost .img-box .post-title {
-        float: left;
-        margin: 0;
-        padding: 15px 15px;
-        background: rgba(36, 55, 67, 0.3); }
-        .eventList .eventPost .img-box .post-title a {
-          color: white; }
-      .eventList .eventPost .img-box .post-excerpt {
-        float: left;
-        position: absolute;
-        margin: 0;
-        padding: 15px;
-        bottom: 0;
-        background: rgba(36, 55, 67, 0.3);
-        box-sizing: border-box; }
-      .eventList .eventPost .img-box .img-overlay {
+      background-size: cover !important; }
+      .introduction .fp-intro .img-background .intro-text {
+        float: right;
+        position: relative;
+        padding: 0 15px 15px 15px;
         width: 100%;
         height: 100%;
-        background: rgba(36, 55, 67, 0.1); }
-  .eventList .moreEvents {
-    margin: 0 auto;
-    width: 200px;
-    height: 75px;
-    text-align: center;
-    line-height: 75px;
-    margin-bottom: 30px;
-    background: #28b78d; }
-    .eventList .moreEvents:hover {
-      background: #34d37c; }
-    .eventList .moreEvents a {
-      display: block;
-      color: #fafafa; }
+        background: rgba(36, 55, 67, 0.8); }
+        .introduction .fp-intro .img-background .intro-text .link {
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+          width: 150px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center; }
+          .introduction .fp-intro .img-background .intro-text .link a {
+            display: block; }
+  .introduction .second .area {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px 15px 15px; }
+    .introduction .second .area .link {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 150px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center; }
+      .introduction .second .area .link a {
+        display: block; }
+  .introduction .quote-area {
+    margin: 60px 0;
+    text-align: center; }
+
+.programList .is-table-row .area .box {
+  border: 1px solid blue;
+  background: #ccc;
+  margin-bottom: 15px;
+  padding: 0 15px; }
+
+.eventList .eventPost {
+  overflow: hidden;
+  margin-bottom: 15px; }
+  .eventList .eventPost .img-box {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -ms-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    overflow: hidden; }
+    .eventList .eventPost .img-box:hover .img-overlay {
+      background: rgba(36, 55, 67, 0.3); }
+    .eventList .eventPost .img-box .post-title {
+      float: left;
+      margin: 0;
+      padding: 15px 15px;
+      background: rgba(36, 55, 67, 0.3); }
+      .eventList .eventPost .img-box .post-title a {
+        color: white; }
+    .eventList .eventPost .img-box .post-excerpt {
+      float: left;
+      position: absolute;
+      margin: 0;
+      padding: 15px;
+      bottom: 0;
+      background: rgba(36, 55, 67, 0.3);
+      box-sizing: border-box; }
+    .eventList .eventPost .img-box .img-overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba(36, 55, 67, 0.1); }
+.eventList .moreEvents {
+  margin: 0 auto;
+  width: 200px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  margin-bottom: 30px;
+  background: #28b78d; }
+  .eventList .moreEvents:hover {
+    background: #34d37c; }
+  .eventList .moreEvents a {
+    display: block;
+    color: #fafafa; }
+
+.section-card {
+  font-size: 30px;
+  text-align: center; }
+
+@media screen and (min-width: 576px) {
+  .introduction .fp-intro .img-background .intro-text {
+    width: 50%; }
+  .introduction .second .area {
+    width: 50%; }
+
+  .programList .container {
+    margin-bottom: 15px; }
+  .programList .is-table-row {
+    display: table;
+    height: 100%; }
+    .programList .is-table-row .area {
+      float: none;
+      display: table-cell;
+      width: 50%;
+      height: 100%;
+      vertical-align: top; }
+      .programList .is-table-row .area .box {
+        display: table;
+        height: 100%;
+        margin-bottom: 0; }
+      .programList .is-table-row .area .second {
+        margin-bottom: 15px; }
+    .programList .is-table-row .left {
+      padding-right: 7.5px; }
+    .programList .is-table-row .right {
+      padding-left: 7.5px; } }
+@media screen and (min-width: 992px) {
+  .introduction .main {
+    padding-right: 7.5px; }
+  .introduction .second {
+    padding-left: 7.5px; } }
 
 /*# sourceMappingURL=home.css.map */
