@@ -1,6 +1,42 @@
 @import '../partials/variables';
 @import '../partials/mixins';
 
+// General formatting
+.outer {
+    .inner {
+        padding: 15px;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+    }
+}
+.link {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    a {
+        display: block;
+    }
+}
+.section-card {
+    font-size: 30px;
+    text-align: center;
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6 {
+        margin: 60px 0;
+    }
+}
+
 // Intro Section
 .introduction {
     margin-top: 15px;
@@ -14,7 +50,6 @@
             .intro-text {
                 float: right;
                 position: relative;
-                padding: 0 15px 15px 15px;
                 width: 100%;
                 height: 100%;
                 background: rgba(36, 55, 67, 0.8);
@@ -22,132 +57,94 @@
                     position: absolute;
                     bottom: 15px;
                     right: 15px;
-                    width: 150px;
-                    height: 30px;
-                    line-height: 30px;
-                    text-align: center;
-                    a {
-                        display: block;
-                    }
                 }
             }
         }
     }
-    .second {
+    .right-col {
         .area {
             float: left;
             position: relative;
             width: 100%;
             height: 100%;
-            padding: 0 15px 15px 15px;
             .link {
                 position: absolute;
                 bottom: 15px;
                 right: 15px;
-                width: 150px;
-                height: 30px;
-                line-height: 30px;
-                text-align: center;
-                a {
-                    display: block;
-                }
             }
-        }
-        .left {
-
-        }
-        .right {
-
         }
     }
     .quote-area {
-        margin: 60px 0;
+        margin-top: 60px;
         text-align: center;
     }
 }
 
 // Program Section
 .programList {
-    .is-table-row {
-        .area {
-            .box {
-                border: 1px solid blue;
-                background: #ccc;
-                margin-bottom: 15px;
-                padding: 0 15px;
-            }
-        }    
+    .program {
+        margin-bottom: 15px;
     }
-    
+    .title {
+            padding: 0;
+        }
+    .list {
+        padding: 0;
+    }
+    .link {
+        margin-top: 30px;
+        width: 100%;
+    }
 }
 
 // Event Section
 .eventList {
-    
-    .eventPost {
-        overflow: hidden;
+    .heading {
         margin-bottom: 15px;
-        .img-box {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            @include header-bg;
-            overflow: hidden;
-            &:hover {
-                .img-overlay {
-                    background: rgba(36, 55, 67, 0.3);
-                }
-            }
-            .post-title {
-                float: left;
-                margin: 0;
-                padding: 15px 15px;
-                background: rgba(36, 55, 67, 0.3);
-                a {
-                    color: white;
-                }
-            }
-            .post-excerpt {
-                float: left;
-                position: absolute;
-                margin: 0;
-                padding: 15px;
-                bottom: 0;
-                background: rgba(36, 55, 67, 0.3);
-                box-sizing: border-box;
-            }
-            .img-overlay {
-                width: 100%;
-                height: 100%;
-                background: rgba(36, 55, 67, 0.1);
-            }
-        }
-    } // event-post
-    .moreEvents {
-        margin: 0 auto;
-        width: 200px;
-        height: 75px;
         text-align: center;
-        line-height: 75px;
-        margin-bottom: 30px;
-        background: $jungle-green;
-        &:hover {
-            background: $lime-green;
-        }
-        a {
-            display: block;
-            color: $white;
-        }
+        background: #abc;
     }
-} // event-list
-
-.section-card {
-    font-size: 30px;
-    text-align: center;
+    .event {
+        padding: 0;
+        .event-post {
+            margin-bottom: 15px;
+            padding: 0 0 15px 0;
+            .area {
+                margin: 0 auto;
+            }
+            .left {
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+            }
+            .right {
+                padding: 0 15px;
+                .post-title {
+                    margin: 5px 0 0 0;
+                }
+                .post-date {
+                    margin: 0;
+                    font-size: $sm-font;
+                }
+            }
+        }
+        .archive-link {
+            padding: 0;
+            margin-bottom: 30px;
+            .link {
+                width: 100%;
+            }
+        }
+        
+    }
+    .media {
+        padding: 0;
+    }
 }
 
-// bootstrap small
+// bootstrap extra small
 @media screen and (min-width: 576px) {
+    
     // into section
     .introduction {
         .fp-intro {
@@ -157,56 +154,82 @@
                 }
             }
         }
-        .second {
+        .right-col {
             .area {
                 width: 50%;
             }
         }
     }
+}
+
+// bootstrap small
+@media screen and (min-width: 768px) {
     
+    // program section
     .programList {
-        .container {
-            margin-bottom: 15px;
+        .title {
+            padding: 0 7.5px 0 15px;
         }
-        .is-table-row {
-            display: table;
-            height: 100%;
-            .area {
-                float: none;
-                display: table-cell;
-                width: 50%;
-                height: 100%;
-                vertical-align: top;
-                .box {
-                    display: table;
-                    height: 100%;
-                    margin-bottom: 0;
-                }
-                .second {
-                    margin-bottom: 15px;
-                }
-            }
-            .left {
-                padding-right: 7.5px;
-            }
-            .right {
-                padding-left: 7.5px;
+        .list {
+            padding: 0 15px 0 7.5px;
+
+            .inner {
+                margin-bottom: 15px;
             }
         }
-        
+        .link {
+            position: absolute;
+            bottom: 15px;
+            right: 22.5px;
+            width: 150px;
+        }
+    }
+    
+    // event section
+    .eventList {
+        .event {
+            padding: 0 7.5px 0 15px;
+            .event-post {
+                .area {
+                    float: left;
+                    width: 50%;
+                }
+                .left {
+                    height: 150px;
+                }
+                .right {
+                    .post-title {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .media {
+            padding: 0 15px 0 7.5px;
+        }
     }
 }
 
 // bootstrap med
 @media screen and (min-width: 992px) {
-    // into section
-    .introduction {
-        .main {
-            padding-right: 7.5px;
-        }
-        .second {
-            padding-left: 7.5px;
-        }
-    }
     
+    // general formating
+    .left-col {
+        padding-right: 7.5px;
+    }
+    .right-col {
+        padding-left: 7.5px;
+    }
+}
+
+// js img resize class
+.img-container {
+    width: 100%;
+    height: 100%;
+}
+.wh {
+    height: 100% !important;
+}
+.ww {
+    width: 100% !important;
 }

@@ -13,10 +13,12 @@ function youandmeif_script_enqueue() {
     /*
     -js-
     Google Jquery 2.2.4 CDN
+    MatchHeight 0.7.0 Local
     */
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', false, '2.2.4');
     wp_enqueue_script('jquery');
+    wp_enqueue_script('matchHeight', get_template_directory_uri() . '/js/jquery.matchHeight.js', array(), '0.7.0', true);
     wp_enqueue_script('youandmeifjs', get_template_directory_uri() . '/js/youandmeif.js', array(), '1.0.0', true);
     // custom js
     wp_enqueue_script('mycustom', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
@@ -64,7 +66,9 @@ function youandmeif_theme_support() {
     
     // featured image support
     add_theme_support('post-thumbnails');
-    add_image_size('medium-thumbnail');
+    add_image_size('small-thumbnail', 200, 100, array('center', 'center'));
+    add_image_size('medium-thumbnail', 500, 250, array('center', 'center'));
+    add_image_size('large-thumbnail', 1024, 512, array('center', 'center'));
     
     // post formats
     add_theme_support('post-formats', array(

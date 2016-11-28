@@ -104,9 +104,23 @@ footer {
 }
 
 /* Front Page */
+// general formatting
+.link {
+    background: $jungle-green;
+    &:hover {
+        background: $lime-green;
+    }
+    a {
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
 .introduction {
     .intro-text {
-        p, .link a {
+        p {
             color: $white;
         }
         .link {
@@ -116,7 +130,7 @@ footer {
             }
         }
     }
-    .second {
+    .right-col {
         .link {
             background: $jungle-green;
             &:hover {
@@ -127,14 +141,51 @@ footer {
             background: $blue-wood;
         }
         .right {
-            background: $regent-gray;
+            background: $blue-wood-light;
         }
-        p, .link a {
+        p {
             color: $white;
         }
     }
 }
 
-/* Large tablet, laptop and desktop viewport */
+.programList {
+    .title {
+        .box {
+            background: $blue-wood;
+        }
+    }
+    .box {
+        .inner {
+            background: $blue-wood;
+            color: $white;
+        }
+    }
+}
+
+.eventList {
+    .event-post {
+        border-bottom: 1px solid $regent-gray;
+    }
+    .post-date {
+        color: $regent-gray;
+    }
+}
+
+/* bootstrap small */
 @media screen and (min-width: 768px) {
+    .programList {
+        .title {
+            .box {
+                .inner {
+                    background: none;
+                }
+            }
+        }
+        .box {
+            .inner {
+                background: $blue-wood-light;
+            }
+        }
+    }
 }

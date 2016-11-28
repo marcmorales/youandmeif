@@ -130,6 +130,4 @@ $(document).ready(function() {
     blogMediumLayout();
     //listen to resize
     myWindow.resize(blogMediumLayout);
-    
-    
 });
