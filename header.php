@@ -86,5 +86,5 @@ endif;
                     </div>
                 </div>
            </nav>
-        </div>
+        </div> <!-- /container-fluid -->
     </header>

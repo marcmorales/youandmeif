@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAMY,+BAAG;EACC,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;AAEd,+BAAG;EACC,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,IAAI;AAOhB,mCAAa;EACT,UAAU,ECjBjB,OAAiB;;ADwB9B,oCAAqC;EAIrB,gCAAc;IACV,OAAO,EAAE,IAAI",
-"sources": ["../../scss/customCSS/nav.scss","../../scss/partials/_variables.scss"],
+"mappings": "AAeA,kBAAkB;AAClB,kBAAkB;AAClB,kBAAkB;ACXN,+BAAG;EACC,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;AAEd,+BAAG;EACC,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,IAAI;AAOhB,mCAAa;EACT,UAAU,EDlBjB,OAAiB;;ACyB9B,oCAAqC;EAIrB,gCAAc;IACV,OAAO,EAAE,IAAI",
+"sources": ["../../scss/partials/_variables.scss","../../scss/customCSS/nav.scss"],
 "names": [],
 "file": "nav.css"
 }

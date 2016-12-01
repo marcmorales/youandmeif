@@ -1,6 +1,88 @@
+/* ============ */
+/* Color Scheme */
+/* ============ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ============ */
+/* Color Scheme */
+/* ============ */
+html,
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 100%; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.3em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: 1.1em; }
+
+p {
+  font-size: 0.9em; }
+
 /*
 This stylesheet holds all the styling for the theme's main navigation bar.
 */
+/* ============ */
+/* Color Scheme */
+/* ============ */
 nav {
   margin: 0 -15px;
   position: fixed;
@@ -115,6 +197,9 @@ nav {
 
   .subMenuIcon {
     display: none; } }
+/* ============ */
+/* Color Scheme */
+/* ============ */
 /* Page header */
 #bannerImage {
   height: 50vh;
@@ -181,6 +266,9 @@ nav {
 .ww {
   width: 100% !important; }
 
+/* ============ */
+/* Color Scheme */
+/* ============ */
 footer ul {
   padding: 0; }
   footer ul li {
@@ -200,14 +288,17 @@ footer .menu-footer-navigation-container li {
   footer .secondary-column,
   footer .lowerFooter {
     text-align: left; } }
-.outer .inner {
+/* ============ */
+/* Color Scheme */
+/* ============ */
+.inner-format {
   padding: 15px; }
-  .outer .inner h1,
-  .outer .inner h2,
-  .outer .inner h3,
-  .outer .inner h4,
-  .outer .inner h5,
-  .outer .inner h6 {
+  .inner-format h1,
+  .inner-format h2,
+  .inner-format h3,
+  .inner-format h4,
+  .inner-format h5,
+  .inner-format h6 {
     margin: 0; }
 
 .link {
@@ -219,16 +310,23 @@ footer .menu-footer-navigation-container li {
     display: block; }
 
 .section-card {
+  margin: 60px 0;
   font-size: 30px;
   text-align: center; }
-  .section-card h1,
-  .section-card h2,
-  .section-card h3,
-  .section-card h4,
-  .section-card h5,
-  .section-card h6 {
-    margin: 60px 0; }
 
+.img-container {
+  width: 100%;
+  height: 100%; }
+
+.wh {
+  height: 100% !important; }
+
+.ww {
+  width: 100% !important; }
+
+/* ============ */
+/* Color Scheme */
+/* ============ */
 .introduction {
   margin-top: 15px; }
   .introduction .fp-intro {
@@ -275,10 +373,18 @@ footer .menu-footer-navigation-container li {
   margin-top: 30px;
   width: 100%; }
 
+.get-involve .area {
+  padding: 15px 0; }
+  .get-involve .area .link {
+    position: absolute;
+    right: 15px;
+    bottom: 15px; }
+.get-involve .donate {
+  margin-bottom: 60px; }
+
 .eventList .heading {
   margin-bottom: 15px;
-  text-align: center;
-  background: #abc; }
+  text-align: center; }
 .eventList .event {
   padding: 0; }
   .eventList .event .event-post {
@@ -304,6 +410,20 @@ footer .menu-footer-navigation-container li {
       width: 100%; }
 .eventList .media {
   padding: 0; }
+  .eventList .media img {
+    float: left;
+    width: 10%;
+    height: auto;
+    margin-right: 5%; }
+  .eventList .media .widget {
+    float: left;
+    width: 85%;
+    height: auto;
+    list-style: none; }
+    .eventList .media .widget .widgettitle {
+      background: #abc;
+      margin: 0 0 15px 0;
+      padding: 15px; }
 
 @media screen and (min-width: 576px) {
   .introduction .fp-intro .img-background .intro-text {
@@ -315,13 +435,26 @@ footer .menu-footer-navigation-container li {
     padding: 0 7.5px 0 15px; }
   .programList .list {
     padding: 0 15px 0 7.5px; }
-    .programList .list .inner {
+    .programList .list .inner-format {
       margin-bottom: 15px; }
   .programList .link {
     position: absolute;
     bottom: 15px;
     right: 22.5px;
     width: 150px; }
+
+  .get-involve {
+    margin-top: 60px;
+    padding-bottom: 60px; }
+    .get-involve .row {
+      padding: 0 15px; }
+    .get-involve .area {
+      float: left;
+      width: 50%; }
+    .get-involve .inner-format {
+      height: 100%; }
+    .get-involve .volunteer {
+      margin-bottom: 15px; }
 
   .eventList .event {
     padding: 0 7.5px 0 15px; }
@@ -340,16 +473,12 @@ footer .menu-footer-navigation-container li {
 
   .right-col {
     padding-left: 7.5px; } }
-.img-container {
-  width: 100%;
-  height: 100%; }
-
-.wh {
-  height: 100% !important; }
-
-.ww {
-  width: 100% !important; }
-
+/* ============ */
+/* Color Scheme */
+/* ============ */
+/* ============ */
+/* Color Scheme */
+/* ============ */
 nav .upperNav .header-widget ul {
   margin: 0;
   padding: 0; }
@@ -362,12 +491,9 @@ nav .lowerNav .menu > li:last-child {
 @media screen and (min-width: 768px) {
   .lowerNav .menu > li:first-child {
     display: none; } }
-/*
-=====================================================================================
-You & Me International Foundation default CSS settings
-All CSS listed here can be modified in WP Admin Dashboard
-=====================================================================================
-*/
+/* ============ */
+/* Color Scheme */
+/* ============ */
 /* General Colors */
 html a,
 body a {
@@ -379,7 +505,7 @@ body a {
 
 /* Navigation */
 nav {
-  color: #fafafa; }
+  color: #f0f3f5; }
   nav .navMenu,
   nav .navStrip {
     background: #28b78d; }
@@ -390,7 +516,7 @@ nav {
       nav .upperNav .menu-secondary-menu-container:hover {
         color: #34d37c; }
     nav .upperNav .searchform #searchsubmit {
-      color: #fafafa;
+      color: #f0f3f5;
       background-color: #28b78d; }
       nav .upperNav .searchform #searchsubmit:hover {
         background-color: #34d37c; }
@@ -405,17 +531,17 @@ nav {
 
 /* General Page */
 .page-title {
-  color: #fafafa; }
+  color: #f0f3f5; }
 
 .child-page-list li a {
-  color: #fafafa;
+  color: #f0f3f5;
   background: #28b78d; }
   .child-page-list li a:hover {
     background: #34d37c; }
 
 /* Footer */
 footer {
-  color: #fafafa;
+  color: #f0f3f5;
   background-color: #243743; }
   footer hr {
     border-color: #8a949b; }
@@ -426,12 +552,12 @@ footer {
   .link:hover {
     background: #34d37c; }
   .link a {
-    color: #fafafa; }
+    color: #f0f3f5; }
     .link a:hover {
-      color: #fafafa; }
+      color: #f0f3f5; }
 
 .introduction .intro-text p {
-  color: #fafafa; }
+  color: #f0f3f5; }
 .introduction .intro-text .link {
   background: #28b78d; }
   .introduction .intro-text .link:hover {
@@ -445,24 +571,43 @@ footer {
 .introduction .right-col .right {
   background: #5988a5; }
 .introduction .right-col p {
-  color: #fafafa; }
+  color: #f0f3f5; }
 
 .programList .title .box {
   background: #243743; }
-.programList .box .inner {
+.programList .box .inner-format {
   background: #243743;
-  color: #fafafa; }
+  color: #f0f3f5; }
 
+.get-involve {
+  color: #f0f3f5; }
+  .get-involve .volunteer {
+    background: rgba(40, 183, 141, 0.5); }
+  .get-involve .donate {
+    background: rgba(36, 55, 67, 0.5); }
+
+.eventList .heading {
+  color: #f0f3f5;
+  background: #5988a5; }
 .eventList .event-post {
-  border-bottom: 1px solid #8a949b; }
+  border-bottom: 1px solid rgba(138, 148, 155, 0.5); }
 .eventList .post-date {
   color: #8a949b; }
+.eventList .media {
+  /*--facebook--*/
+  /*--twitter--*/ }
+  .eventList .media .widgettitle {
+    color: #f0f3f5; }
+  .eventList .media #weblizar_facebook_likebox-3 .widgettitle {
+    background: #3b5998; }
+  .eventList .media #aptf_widget-6 .widgettitle {
+    background: #00aced; }
 
 /* bootstrap small */
 @media screen and (min-width: 768px) {
-  .programList .title .box .inner {
+  .programList .title .box .inner-format {
     background: none; }
-  .programList .box .inner {
+  .programList .box .inner-format {
     background: #5988a5; } }
 
 /*# sourceMappingURL=youandmeif.css.map */

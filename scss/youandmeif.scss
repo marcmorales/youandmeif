@@ -1,19 +1,16 @@
 @import 'partials/variables';
 @import 'partials/mixins';
+@import 'reset';
+@import 'globalThemeStyle';
 @import 'navStyle';
 @import 'pageStyle';
 @import 'blogStyle';
 @import 'footerStyle';
+@import 'customCSS/generalFormat';
 @import 'customCSS/home';
 @import 'customCSS/about';
 @import 'customCSS/nav';
-
-/*
-=====================================================================================
-You & Me International Foundation default CSS settings
-All CSS listed here can be modified in WP Admin Dashboard
-=====================================================================================
-*/
+@import 'customCSS/rental';
 
 /* General Colors */
 
@@ -103,7 +100,9 @@ footer {
     }
 }
 
+
 /* Front Page */
+
 // general formatting
 .link {
     background: $jungle-green;
@@ -156,19 +155,52 @@ footer {
         }
     }
     .box {
-        .inner {
+        .inner-format {
             background: $blue-wood;
             color: $white;
         }
     }
 }
 
+.get-involve {
+    color: $white;
+    .volunteer {
+        background: rgba(40, 183, 141, 0.5);
+    }
+    .donate {
+        background: rgba(36, 55, 67, 0.5);
+    }
+}
+
+
 .eventList {
+    .heading {
+        color: $white;
+        background: $blue-wood-light;
+    }
     .event-post {
-        border-bottom: 1px solid $regent-gray;
+        border-bottom: 1px solid $regent-gray-50;
     }
     .post-date {
         color: $regent-gray;
+    }
+    .media {
+        .widgettitle {
+            color: $white;
+        }
+        
+        /*--facebook--*/
+        #weblizar_facebook_likebox-3 {
+            .widgettitle {
+                background: #3b5998;
+            }
+        }
+        /*--twitter--*/
+        #aptf_widget-6 {
+            .widgettitle {
+                background: #00aced;
+            }
+        }
     }
 }
 
@@ -177,13 +209,13 @@ footer {
     .programList {
         .title {
             .box {
-                .inner {
+                .inner-format {
                     background: none;
                 }
             }
         }
         .box {
-            .inner {
+            .inner-format {
                 background: $blue-wood-light;
             }
         }

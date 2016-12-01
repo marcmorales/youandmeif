@@ -94,6 +94,16 @@ function youandmeif_widget() {
         'id'    => 'sidebar1'
     ));
     
+    register_sidebar( array(
+        'name' => 'FrontPage Twitter Sidebar',
+        'id'    => 'connect1'
+    ));
+    
+    register_sidebar( array(
+        'name' => 'FrontPage Facebook Sidebar',
+        'id'    => 'connect2'
+    ));
+    
 }
 add_action('widgets_init', 'youandmeif_widget');
 
@@ -150,7 +160,7 @@ function youandmeif_fp_callout( $wp_customize ) {
         'section'   => 'unme-fp-intro',
         'settings'  => 'unme-fp-headline'    
     )));
-
+    
     $wp_customize->add_setting('unme-fp-txt', array(
         'default'   => 'Sample paragraph text'
     ));
@@ -250,6 +260,22 @@ function youandmeif_fp_callout( $wp_customize ) {
         'section'   => 'unme-fp-intro',
         'settings'  => 'unme-fp-quote',
         'type'  => 'textarea'
+    )));
+    
+    $wp_customize->add_section('unme-get-involve', array(
+        'title' => 'Get Involve Section'
+    ));
+    //
+    $wp_customize->add_setting('unme-gi-img');
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control($wp_customize, 'unme-gi-img-control', array(
+        'label' => 'Image',
+        'section'   => 'unme-get-involve',
+        'settings'  => 'unme-gi-img',
+        'width'     => 2000,
+        'height'    => 1000,
+        'flex-width'    => true,
+        'flex-height'    => true,
     )));
 }
 add_action('customize_register', 'youandmeif_fp_callout');

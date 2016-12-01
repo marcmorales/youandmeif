@@ -1,6 +1,9 @@
 /*
 This stylesheet holds all the styling for the theme's main navigation bar.
 */
+/* ============ */
+/* Color Scheme */
+/* ============ */
 nav {
   margin: 0 -15px;
   position: fixed;
